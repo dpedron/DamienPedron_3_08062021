@@ -1,0 +1,10 @@
+header{
+    display: flex;
+    margin: 10px 0 5px 0;
+    justify-content: center;
+    .logo{
+        font-family: $logo-font;
+        font-size: 1.85rem;
+        margin: 0;
+    }
+}
