@@ -37,9 +37,13 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
-    @import '../components/_button';
     background-color: $bg-color;
-    padding: 30px 0px 50px 0px;
+    padding: 30px 0px 50px 0px;    
+    @import '../components/_button';
+    & .button{        
+    padding: 15px 22px;
+    width: 176px;
+    }
     &__heading{
         margin: 0;
         padding: 0 60px;
@@ -116,6 +120,8 @@ a{
     border-radius: 15px;
     overflow: hidden;
     position: relative;
+    display: block;    
+    box-shadow: 0px 0px 20px #e5e5e5;
 
     &__new{
         position: absolute;
@@ -137,39 +143,46 @@ a{
        object-position: 50% 62%;
     }
 
-    &__sub{
+    &-sub{
         display: grid;
         grid-template-areas: 
         "name heart"
         "location heart";
         padding: 10px 24px 15px 12px;
 
-        &--name{
-            grid-area: name;                     
-            grid-column: 1; 
-            grid-row: 1; 
+        &__name{
+            grid-area: name;
             margin: 0 0 5px 0;
             font-size: 1.15rem;
             font-weight: 800;
         }
 
-        &--location{
-            grid-area: location;                     
-            grid-column: 1; 
-            grid-row: 2;             
+        &__location{
+            grid-area: location;
             margin: 0; 
             font-size: 1rem;
         }
 
-        &--heart{
-            grid-area: heart;                     
-            grid-column: 2; 
-            grid-row: 1 / 2; 
+        &__heart{
+            grid-area: heart;
             align-self: flex-end;
-            text-align: right;
+            justify-self: flex-end;
             font-size: 1.3rem;
-            transform: scaleZ(1);
-            transition-duration: 2s;
+            width: 20.8px;            
+            z-index: 2;
+            &:hover + .restaurant-card-sub__heart--hover{
+                transform: scale(1.01);
+            }
+            &--hover{
+                grid-area: heart;
+                font-size: 1.3rem;                               
+                align-self: flex-end;
+                justify-self: flex-end;
+                color: $secondary-color;
+                transition: transform 500ms ease-in-out;
+                transform: scale(0);
+                z-index: 1;
+            }
         }
     }
 }
@@ -301,4 +314,3 @@ a{
         padding: 25px 0;
     }
 }
-

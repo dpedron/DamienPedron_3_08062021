@@ -12,6 +12,7 @@ body{
 @import "../../layouts/header";
 
 header i{
+    color: black;
     position: absolute;
     left: 22px;
     top: 15.1px;
@@ -115,14 +116,10 @@ header i{
     align-items: center;
     justify-content: center;
     height: 167px;
-    padding-bottom: 13px;
+    padding-bottom: 13px;    
+    @import '../../components/_button';
     & .button{
-        background: linear-gradient(to top left, $primary-color, $secondary-color);
         padding: 15px 45px;
-        text-decoration: none;
-        color: white;
-        border-radius: 25px;
-        box-shadow: 0 5px 5px #d1cece;
     }
 }
 

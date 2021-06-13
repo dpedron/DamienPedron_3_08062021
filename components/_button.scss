@@ -1,13 +1,12 @@
 .button{
-    background: linear-gradient(to top left, $primary-color, $secondary-color);
-    padding: 15px 22px;
     text-decoration: none;
     color: white;
-    width: 176px;
     align-self: center;
     border-radius: 25px;
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
     box-shadow: 0 5px 5px #d1cece;
     &:hover{
         background: linear-gradient(to top left, lighten($primary-color, 2%), lighten($secondary-color, 2%));
+        box-shadow: 0 5px 5px darken(#d1cece, 10%);
     }
 }
