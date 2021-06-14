@@ -7,6 +7,11 @@ body{
     font-family: $text-font;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 /* HEADER */
 
 @import "../../layouts/header";
@@ -69,6 +74,7 @@ header i{
 }
 
 .menu-dish{
+    display: block;
     background-color: white;
     padding: 12px 23px 12px 10px;
     margin-bottom: 13px;
@@ -96,7 +102,12 @@ header i{
     & .check-slide{
         overflow: hidden;
         width: 0px;
-        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    &:hover .check-slide{
+        width: 50px;
     }
 }
 
