@@ -74,44 +74,98 @@ header i{
 }
 
 .menu-dish{
-    display: block;
-    background-color: white;
-    padding: 12px 23px 12px 10px;
+    display: grid;
+    grid-template-areas: 
+    "a . d"
+    "b c d";
+    grid-template-columns: auto auto min-content;
+    padding-left: 10px;
     margin-bottom: 13px;
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0px 0px 20px #e5e5e5;
-    animation: fadein 3s ease-in-out;
-    &-entitled{
-        margin: 0 0 5px 0;
+    animation: fade-in 3s ease-in-out;   
+    overflow: hidden;
+    &__entitled{
+        grid-area: a;
+        margin: 12px 0 6px 0;
+        font-size: 1.05rem;   
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
-    &-sub-entitled{
-        display: flex;
-        justify-content: space-between;
-        & p:first-child{
-            flex-grow: 1;
-        }
-        & p{
-            margin:0;
-        }
-        &__price{
-            padding-left: 10px;
-            font-weight: bold;
-            color: #383838;
-        }
+    &__sub-entitled{
+        grid-area: b;
+        margin: 0 0 12px 0;
+        font-size: 0.86rem;   
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    &__price{
+        grid-area: c;
+        text-align: right;
+        margin: 0 0 14px 0;
+        padding:0 23px;
+        font-size: 0.8rem;
+        font-weight: bold;
     }
     & .check-slide{
+        grid-area: d;
         overflow: hidden;
         width: 0px;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items:center;
+        background-color: $tertiary-color;
+        animation: slide-out 500ms;
+        & i{            
+        transition: transform 500ms;
+        font-size: 22px;
+        color: white;
+        }
     }
     &:hover .check-slide{
-        width: 50px;
+        width: 60px;
+        animation: slide-in 500ms;
+    }
+    &:hover .check-slide i{
+        animation: rotation 500ms backwards;
+    }
+
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1turn);
     }
 }
 
-@keyframes fadein {
+@keyframes slide-in{
+    from {
+        width: 0;
+    }
+    to{
+        width: 60px;
+    }
+    
+}
+
+@keyframes slide-out{
+    from {
+        width: 60px;
+    }
+    to{
+        width: 0;
+    }
+    
+}
+
+@keyframes fade-in {
     from {
         margin-top: 20px;
         opacity:0;
