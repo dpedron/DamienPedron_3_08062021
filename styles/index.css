@@ -40,13 +40,13 @@ a {
 }
 
 .loader p {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Shrikhand", cursive;
   margin-top: 0;
 }
 
 .loader i {
-  font-size: 8rem;
+  font-size: 6rem;
   color: black;
   -webkit-animation: loading 1s ease-in-out infinite;
           animation: loading 1s ease-in-out infinite;
@@ -121,7 +121,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px 0 5px 0;
+  margin: 12px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -129,9 +129,7 @@ header {
 }
 
 header .logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.85rem;
-  margin: 0;
+  width: 164px;
 }
 
 /* MAIN */
@@ -201,7 +199,7 @@ header .logo {
 .discover__sub-heading {
   font-size: 1.1rem;
   font-weight: 300;
-  margin: 15px 0 30px 0;
+  margin: 15px 20px 30px 20px;
 }
 
 /* OPERATION */
@@ -230,8 +228,13 @@ header .logo {
           box-shadow: 0px 5px 15px #e5e5e5;
 }
 
-.step--bg {
+.step:hover {
   background-color: #f5edff;
+  cursor: pointer;
+}
+
+.step:hover i {
+  color: #9356DC;
 }
 
 .step__number {
@@ -332,6 +335,7 @@ header .logo {
 }
 
 .restaurant-card-sub__heart {
+  cursor: pointer;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -445,17 +449,11 @@ footer a {
   .discover {
     padding: 20px 0 0 0;
   }
-  .discover .button {
-    display: none;
-  }
   /* OPERATION */
   .operation {
     background-color: #f6f6f6;
     margin: 0;
     padding: 0 20px 20px 20px;
-  }
-  .operation h1 {
-    display: none;
   }
   .operation .step {
     display: -webkit-box;
@@ -468,11 +466,11 @@ footer a {
     background-color: white;
     padding: 5px;
   }
-  .operation .step--bg {
+  .operation .step:hover {
     background-color: #f5edff;
   }
   .operation .step__number {
-    top: 12px;
+    margin: 0;
     left: 0;
     border-radius: 15px 0 0 15px;
     width: 50px;

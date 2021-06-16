@@ -5,6 +5,8 @@
 body{
     margin: 0;
     font-family: $text-font;
+    max-width: 1500px;
+    margin: auto;
 }
 
 a{
@@ -20,7 +22,7 @@ header i{
     color: black;
     position: absolute;
     left: 22px;
-    top: 15.1px;
+    top: 6px;
 }
 
 /* MAIN */
@@ -28,9 +30,12 @@ header i{
 /* RESTAURANT */
 
 .restaurant-pic{
+    position: relative;
+    z-index: -1;
+    max-width: 1500px;
     width: 100%;
-    background: center / cover no-repeat url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     height: 255px;
+    object-fit: cover;
 }
 
 .restaurant-name{
@@ -47,11 +52,21 @@ header i{
         font-weight: 500;
         margin-bottom: 15px;
     }
-    & i{
+    & div{
+        position: relative;
+        width: 20.8px;
+        height: 20.8px;
+    }
+    &__heart{
+        cursor: pointer;
         font-size: 1.3rem;
+        mask-image: url(../../images/icon/heart-solid.svg);
+        &:hover{
+            background-color: $secondary-color;
+            transition: background-color 500ms ease-in-out;
+        }
     }
 }
-
 
 /* MENU */
 
@@ -206,7 +221,7 @@ header i{
 }
 
  
-
+/* DESKTOP */
 
 @media (min-width: 1024px){
 
@@ -259,5 +274,13 @@ header i{
         text-align: center;
         flex-direction: column;
     }
+}
 
+/* XL */
+
+@media (min-width: 1500px){
+
+    .restaurant-name{
+        border-radius: 0;
+    }
 }
