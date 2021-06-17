@@ -350,8 +350,8 @@ header .logo {
   grid-area: heart;
   cursor: pointer;
   font-size: 1.3rem;
-  -webkit-mask-image: url(../../images/icon/heart-solid.svg);
-          mask-image: url(../../images/icon/heart-solid.svg);
+  -webkit-mask-image: url(../images/icon/heart-solid.svg);
+          mask-image: url(../images/icon/heart-solid.svg);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #FF79DA));
   background: linear-gradient(to bottom, white 50%, #FF79DA 50%);
   background-size: 100% 200%;
