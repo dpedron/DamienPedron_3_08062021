@@ -5,6 +5,7 @@
     border-radius: 25px;
     background: linear-gradient(to top left, $primary-color, $secondary-color);
     box-shadow: 0 5px 5px #d1cece;
+    transition: all 500ms ease-in-out;
     &:hover{
         background: linear-gradient(to top left, lighten($primary-color, 2%), lighten($secondary-color, 2%));
         box-shadow: 0 5px 5px darken(#d1cece, 10%);
