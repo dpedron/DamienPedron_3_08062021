@@ -314,6 +314,10 @@ header .logo {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "name heart" "location heart";
+  -ms-grid-rows: auto 20.8px;
+      grid-template-rows: auto 20.8px;
+  -ms-grid-columns: auto 20.8px;
+      grid-template-columns: auto 20.8px;
   padding: 10px 24px 15px 12px;
 }
 
@@ -335,41 +339,29 @@ header .logo {
 }
 
 .restaurant-card-sub__heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: heart;
   cursor: pointer;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: heart;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  justify-self: flex-end;
   font-size: 1.3rem;
-  width: 20.8px;
-  z-index: 2;
+  -webkit-mask-image: url(../../images/icon/heart-solid.svg);
+          mask-image: url(../../images/icon/heart-solid.svg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #FF79DA));
+  background: linear-gradient(to bottom, white 50%, #FF79DA 50%);
+  background-size: 100% 200%;
+  background-position: right top;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-.restaurant-card-sub__heart:hover + .restaurant-card-sub__heart--hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
-.restaurant-card-sub__heart--hover {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: heart;
-  font-size: 1.3rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  justify-self: flex-end;
-  color: #FF79DA;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  z-index: 1;
+.restaurant-card-sub__heart:hover {
+  background-position: right bottom;
 }
 
 /* FOOTER */
@@ -530,4 +522,4 @@ footer a {
     padding: 25px 0;
   }
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */

@@ -71,23 +71,27 @@ header i {
   margin-bottom: 15px;
 }
 
-.restaurant-name div {
-  position: relative;
-  width: 20.8px;
-  height: 20.8px;
-}
-
 .restaurant-name__heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  grid-area: heart;
   cursor: pointer;
   font-size: 1.3rem;
   -webkit-mask-image: url(../../images/icon/heart-solid.svg);
           mask-image: url(../../images/icon/heart-solid.svg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #FF79DA));
+  background: linear-gradient(to bottom, white 50%, #FF79DA 50%);
+  background-size: 100% 200%;
+  background-position: right top;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .restaurant-name__heart:hover {
-  background-color: #FF79DA;
-  -webkit-transition: background-color 500ms ease-in-out;
-  transition: background-color 500ms ease-in-out;
+  background-position: right bottom;
 }
 
 /* MENU */
