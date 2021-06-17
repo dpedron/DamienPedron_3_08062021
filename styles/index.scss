@@ -132,7 +132,7 @@ a{
     border-radius: 15px;    
     box-shadow: 0px 5px 15px #e5e5e5;
     &:hover{        
-        background-color: #f5edff;
+        background-color: $tertiary-color;
         cursor: pointer;
         & i{
             color: $primary-color;
