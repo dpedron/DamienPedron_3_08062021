@@ -313,7 +313,8 @@ header .logo {
 .restaurant-card-sub {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "name heart" "location heart";
+      grid-template-areas: "name heart"
+ "location heart";
   -ms-grid-rows: auto 20.8px;
       grid-template-rows: auto 20.8px;
   -ms-grid-columns: auto 20.8px;
